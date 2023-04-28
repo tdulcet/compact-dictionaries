@@ -1,0 +1,2 @@
+# compact-dictionary
+Compact Dictionary
