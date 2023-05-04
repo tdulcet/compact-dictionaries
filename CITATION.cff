@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: Compact Dictionaries
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Teal
+    family-names: Dulcet
+    orcid: 'https://orcid.org/0009-0008-6616-2631'
+repository-code: 'https://github.com/tdulcet/compact-dictionaries'
+repository: 'https://gitlab.com/tdulcet/compact-dictionaries'
+abstract: >-
+  Prepossessed free English dictionaries/thesauruses in JSON
+  Lines format that are automatically updated weekly.
+license: GPL-3.0
+references:
+  - authors:
+      - family-names: Ylonen
+        given-names: Tatu
+        orcid: 'https://orcid.org/0000-0003-4180-1229'
+    title: "Wiktextract: Wiktionary as Machine-Readable Structured Data"
+    type: software
