@@ -6,7 +6,7 @@ on:
 
 jobs:
   update:
-    name: Update databases
+    name: Update dictionaries
 
     runs-on: ubuntu-latest
     env:
@@ -37,8 +37,9 @@ jobs:
         git gc
         free -wh
         git push origin "HEAD:$CI_DEFAULT_BRANCH" -f
+        curl -X POST -H "PRIVATE-TOKEN: $ACCESS_TOKEN" "https://$CI_SERVER_HOST/api/v4/projects/$GITLAB_USER_NAME%2F$CI_PROJECT_NAME/housekeeping?task=prune"
         cp README.md CHANGELOG.md ..
     - name: After script
       run: |
-        git commit -am "Updated databases $(date -u +%F)."
+        git commit -am "Updated dictionaries $(date -u +%F)."
         git push

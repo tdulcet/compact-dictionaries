@@ -11,7 +11,7 @@ authors:
 repository-code: 'https://github.com/tdulcet/compact-dictionaries'
 repository: 'https://gitlab.com/tdulcet/compact-dictionaries'
 abstract: >-
-  Prepossessed free English dictionaries/thesauruses in JSON
+  Preprocessed free English dictionaries/thesauruses in JSON
   Lines format that are automatically updated weekly.
 license: GPL-3.0
 references:
