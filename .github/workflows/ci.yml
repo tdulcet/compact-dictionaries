@@ -19,6 +19,12 @@ jobs:
       CI_DEFAULT_BRANCH: main
     steps:
     - uses: actions/checkout@v3
+    - name: Free disk space
+      run: |
+        df -kh .
+        sudo apt-get -yqq clean
+        sudo rm -rf /usr/local/lib/android
+        df -kh .
     - name: Before script
       run: |
         wget https://raw.github.com/tdulcet/Linux-System-Information/master/info.sh -qO - | bash -s
