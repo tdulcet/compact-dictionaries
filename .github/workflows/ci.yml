@@ -18,7 +18,7 @@ jobs:
       CI_PROJECT_URL: "https://gitlab.com/${{ github.repository }}"
       CI_DEFAULT_BRANCH: main
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Free disk space
       run: |
         df -kh .
