@@ -49,5 +49,8 @@ jobs:
         cp README.md CHANGELOG.md ..
     - name: After script
       run: |
+        if git diff --quiet; then
+            exit 0
+        fi
         git commit -am "Updated dictionaries $(date -u +%F)."
         git push
