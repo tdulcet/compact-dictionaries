@@ -43,7 +43,8 @@ jobs:
         bash commit.sh
         git remote set-url origin "https://$GITLAB_USER_NAME:${{ secrets.ACCESS_TOKEN }}@$CI_SERVER_HOST/$CI_PROJECT_PATH.git"
         free -wh
-        git gc
+        git gc --prune=30.minutes.ago
+        git lfs prune -d
         free -wh
         git push origin "HEAD:$CI_DEFAULT_BRANCH" -f
         cp README.md CHANGELOG.md ..
@@ -57,4 +58,4 @@ jobs:
     - name: Prune
       if: always()
       run: |
-        curl -sS -X POST -H "PRIVATE-TOKEN: ${{ secrets.ACCESS_TOKEN }}" "https://$CI_SERVER_HOST/api/v4/projects/$GITLAB_USER_NAME%2F$CI_PROJECT_NAME/housekeeping?task=prune"
+        curl -sSf -X POST -H "PRIVATE-TOKEN: ${{ secrets.ACCESS_TOKEN }}" "https://$CI_SERVER_HOST/api/v4/projects/$GITLAB_USER_NAME%2F$CI_PROJECT_NAME/housekeeping?task=prune"
