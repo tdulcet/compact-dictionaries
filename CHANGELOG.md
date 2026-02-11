@@ -3,6 +3,10 @@
 ### Unreleased
 
 
+### 2026-02-11
+- [Updated dictionaries 2026-02-11.](https://gitlab.com/tdulcet/compact-dictionaries/-/commit/e29809181071fc521532144c4cd642d1d2d31d8e)
+
+
 ### 2026-01-21
 - [Updated dictionaries 2026-01-21.](https://gitlab.com/tdulcet/compact-dictionaries/-/commit/04d0982b1a136dac2e8ff948b3529794304aea3a)
 
